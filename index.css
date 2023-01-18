@@ -277,3 +277,110 @@ label div:last-child {
         margin-top: 0px;
         text-align: center;
     }
+    /* slider One */
+
+    .transition1{
+        overflow: hidden;
+        border: 2px solid rgb(253, 253, 253);
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #transition1>div>img:hover {
+         transform: scale(1.1); 
+         transition: all 1s;
+       }
+        
+        #transition1>div{ 
+         overflow: hidden;
+         border: 2px solid white;
+        }
+     
+     
+        /* SECOND SLIDER */
+        body {
+         margin: 0;
+         padding: 0;
+        }
+        #transition2{
+        overflow: hidden;
+        border: 2px solid white;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #transition2>div>img:hover {
+         transform: scale(1.1); 
+        }
+        #transition2>div> img {   
+            transition: all 1s;
+        }
+        #transition2>div{ 
+         overflow: hidden;
+         border: 2px solid white;
+        }
+     
+        /* sliderheadings */
+     
+        #slidehead{
+         text-align: center;
+         font-weight: 700;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Footer  */
+        #aboutus{
+            background-color: #F4F5F4;
+            padding: 20px 0px;
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            
+        }
+        
+        #aboutus>:nth-child(1){
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            vertical-align: middle;
+            
+        }
+        #aboutus>:nth-child(2){
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            vertical-align: middle;
+            
+        }
+        #seller{
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            background-color: #FEFFFE;
+            padding: 10px;
+            margin:5px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #seller2{
+            display: flex;
+            /* border: 1px solid red; */
+            gap:5px;
+        }
+        #seller2>div{
+            border: 1px solid rgb(123, 189, 243);
+        }
+        
+        #everything>:nth-child(2){
+            display: grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:10px;
+            margin: 20px;
+          
+        }
