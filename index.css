@@ -1,3 +1,8 @@
+#main{
+    width: 95%;
+    margin: auto;
+}
+
 #main-website-logo-image {
     width: 6%;
     margin-left: 45%;
@@ -253,3 +258,22 @@ label div:last-child {
     margin-left: 4%;
 
 }
+
+
+    /* Four Divs */
+    #four-div{
+        display: flex;
+        margin-top: 80px;
+    }
+
+    #four-div img{
+        width: 25px;
+        height: 25px;
+        display: block;
+        margin: auto;
+        /* border: 1px solid red; */
+    }
+    #four-div h4{
+        margin-top: 0px;
+        text-align: center;
+    }
