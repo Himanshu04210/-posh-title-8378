@@ -226,3 +226,30 @@ label div:last-child {
     color: orangered;
  }
 
+/* logo */
+.logo{
+    display: flex;
+    gap: 10px;
+    
+}
+.logo>div{
+    border-radius: 50px;
+}
+.logo img{
+    border-radius: 100px;
+    border: 1px solid gray;
+}
+.logo h5 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.corousel-image{
+    border-radius: 50%;
+    width: 50%;
+}
+.box1, .box2, .box3{
+    margin-top:5%;
+    margin-left: 4%;
+
+}
