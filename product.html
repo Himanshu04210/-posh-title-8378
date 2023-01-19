@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+   
+</head>
+<body>
+    <nav>
+        <div class="main-wesite-navbar">
+            <div class="website-logo">
+                <img id="main-website-logo-image"
+                    src="Icons\Digital Dealz.png">
+            </div>
+            <div class="nav-elements">
+                <div class="menu-shopbyCategory">
+                    <input type="checkbox" id="menu_checkbox">
+                    <label for="menu_checkbox">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </label>
+                    <div id="shopByCategory">
+                        <h3>Shop by Category</h3>
+                    </div>
+
+                </div>
+                <div>
+                    <input type="text" placeholder="Search for products, Brand or Catogery"
+                        id="nav-bar-inputSearch">
+                </div>
+                <div id="MyOrders">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR42KekUZEM22SY1PI5czIdc0it0hARUX6Xg&usqp=CAU">
+                    <p>My Orders</p>
+                </div>
+                <div id="Cart-navBar">
+                    <img
+                        src="https://w7.pngwing.com/pngs/985/202/png-transparent-shopping-bag-icon-orange-shopping-bag-text-logo-coffee-shop.png">
+                    <p>No Items in<br>the Bag
+                    <p>
+                </div>
+                <div id="Login-Signup">
+                    <img
+                        src="https://thumbs.dreamstime.com/z/emoji-smart-smiling-orange-glasses-isolated-vector-cute-smile-wearing-smiley-fruit-flat-design-emoticon-icon-white-97249919.jpg">
+                    <p>LogIn/SignUp</p>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- nav part ended -->
+<div id="main">
+
+    <div id="functionality">
+        <div class="categories">
+            <input type="text" placeholder="< Home & Kitchen" class="display-categories">
+            <input type="text" placeholder="< Women's Fashion" class="display-categories">
+            <input type="text" placeholder="< Stationery" class="display-categories">
+            <input type="text" placeholder="< Baby, Kids & Toys" class="display-categories">
+            <input type="text" placeholder="< Men's Fashion" class="display-categories">
+            <input type="text" placeholder="< Deals For You" class="display-categories">
+            <input type="text" placeholder="< Electronics" class="display-categories">
+            <input type="text" placeholder="< Mobiles & Accessories" class="display-categories">
+            <input type="text" placeholder="< Sports & Health" class="display-categories">         
+        </div>
+        <div id="fillter">
+            <div class="fillter-head">
+                <h3>Price</h3>
+                <p>Clear</p>
+            </div>
+            <div class="fillter-input">
+                <input type="number" placeholder="min" id="min">
+                <h4 id="range">to</h4>
+                <input type="number" placeholder="max" id="max">
+                <button id="fillter-btn">Fillter</button>
+            </div>
+        </div>
+    </div>
+    <div id="products-main">
+    <div id="Sort-functionality">
+        <h2 id="product-categorie">Mobiles</h2>
+        <select name="sort" id="sort">
+            <option value="Sort-by-Relevance">Sort by Price</option>
+            <option value="Low-High">Low-to-High</option>
+            <option value="High-Low">High-to-Low</option>
+        </select>
+    </div>
+    
+    <div id="products"></div>
+    </div>
+</div>
+</body>
+<script src="product.js"></script>
+</html>
