@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#payment{
+   
+     flex-wrap: nowrap;
+    
+    height:90%;
+    width:450px;
+    text-align: center;
+    margin:auto;
+    text-indent: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    
+}
+.options{
+    height:100px;
+    width:95%;
+    display: flex;
+    justify-content: space-between;
+    border:1px solid black;
+    margin: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+
+
+}
+.options:hover{
+    height:102px;
+    width:95.4%;
+    transition-duration: 0.3s;
+}
+.options>img{
+    height:40%;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+#bottom{
+height:25px;
+width:90%;
+display: flex;
+justify-content: space-between;
+padding-bottom: 40px;
+/* border: 1px solid red; */
+margin:auto;
+
+}
+#bottom>img{
+    height:140%;
+   padding-top: 15px;
+   padding-right: 10px;
+}
+#bottom>p{
+    margin: 0;
+   padding: 25px;
+}
+#logo{
+    height: 80px;
+    width: 150px;
+    padding-top: 10px;
+    border-radius: 2px;
+}
+#card input{
+    width:95%;
+    font-size: 30px;
+
+}
+#card{
+    visibility: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    top:-200px;
+
+    
+    
+}
+#pay{
+    height:40px;
+    width:95%;
+    margin: auto;
+    color:cornsilk;
+    background-color: dodgerblue;
+    text-align: center;
+    border-radius: 30px;
+    
+}
+#pay>h3{
+    padding-top: 10px;
+    font-size: 25px;
+}
+#cross{
+    text-align: end;
+    padding-right: 7px;
+    color:red;
+    cursor: pointer;
+
+}
+#passcode{
+    height:40px;
+    width:90%;
+    display: flex;
+    padding-left: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    
+}
+#passcode>input{
+    width:25%;
+    height:40px;
+    font-size: 20px;
+    
+}
+#amount{
+    height: 40px;
+    width:80%;
+    margin: 20px;
+    background-color: blue;
+    color: azure;
+    border-radius: 30px;
+    text-align: center;
+    
+}
+#amount>h3{
+    padding: 8px;
+}
+
+#paytmwallet{
+    visibility: hidden;
+}
+#back{
+    text-align: end;
+    padding-right: 7px;
+    color:red;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="payment">
+        <img  id="logo" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.canva.com%2Fdesign%2FDAFX5nnVCzA%2FrDGKf4n6eZnQ7zpnpvH0HQ%2Fscreen">
+
+        <h3>Select an option to pay</h3>
+
+        <div id="option" class="options">
+            <h3>DD Balance</h3>
+        <img src="https://staticpg.paytm.in/pgp/v2/web/assets/wallet-icon.png">
+
+        </div>
+
+        <div  id="cardoption" class="options">
+            <h3>New Payment option</h3>
+            
+            <img src="https://staticpg.paytm.in/pgp/v2/web/assets/ptm-card-icon.png">
+        </div>
+        <p>Prepaid,Debit&Credit Cards</p>
+
+
+        <div id="paytmwallet">
+            <h2 id="back">&times;</h2>
+            <h3>Enter PAYTM passcode</h3>
+            <div id="passcode">
+                <input id="value1" type="text">
+                <input id="value2" type="text">
+                <input id="value3" type="text">
+                <input id="value4" type="text">
+            </div>
+            <div id="amount"><h3>PAY 2000</h3>PAY 2000</div>
+            </div>
+
+        <div id="card">
+            <h3 id="cross">X</h3>
+<h3>Enter Debit or Credit Card Details</h3>
+<input id="cardno" type="text" placeholder="Card Number">
+<input  id="expiry" type="text" placeholder="Expiry/Validity">
+<input  id="cv" type="text" placeholder="CVV">
+
+<div id="pay">
+<h3>PAY 2000</h3>
+</div>
+
+
+
+
+
+
+</div>
+<div id="bottom">
+    <p>100% secure payments powered by </p>
+    <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.canva.com%2Fdesign%2FDAFX5nnVCzA%2FrDGKf4n6eZnQ7zpnpvH0HQ%2Fscreen">
+
+</div>
+        </div>
+
+       
+
+        
+
+</body>
+
+
+</html>
+<script>
+    let pay=document.getElementById("pay");
+   
+
+pay.addEventListener("click",()=>{
+    let cardnumber=document.getElementById("cardno").value;
+    let cv=document.getElementById("cv").value;
+    let validity=document.getElementById("expiry").value;
+
+    if(cardnumber.length==16 && cv.length==3 && validity.length==5){
+        window.location.href='thankyou.html'
+    }else{
+        alert("Invalid Details")
+    }
+    console.log(cv.length)
+})
+
+let carddetails=document.getElementById("cardoption");
+
+
+carddetails.addEventListener("click",()=>{
+let carddetails=document.querySelector("#card");
+carddetails.style.visibility="visible";
+let carddetailsp=document.querySelector("#paytmwallet");
+    
+    carddetailsp.style.visibility="hidden";
+})
+
+let cross=document.querySelector("#cross");
+
+cross.addEventListener("click",()=>{
+    let carddetails=document.querySelector("#card");
+    
+    carddetails.style.visibility="hidden";
+    
+    
+
+})
+
+let passcode=document.querySelector(".options")
+
+passcode.addEventListener("click",()=>{
+    let paytm=document.getElementById("paytmwallet");
+    paytm.style.visibility="visible"
+    let carddetails=document.querySelector("#card");
+    
+    carddetails.style.visibility="hidden";
+})
+let back=document.querySelector("#back");
+back.addEventListener("click",()=>{
+    let carddetails=document.querySelector("#paytmwallet");
+    
+    carddetails.style.visibility="hidden";
+    
+
+})
+
+let amount=document.getElementById("amount");
+
+amount.addEventListener("click",()=>{
+    let value1=document.getElementById("value1").value;
+    let value2=document.getElementById("value2").value;
+    let value3=document.getElementById("value3").value;
+    let value4=document.getElementById("value4").value;
+    if(value1.length==1 && value2.length==1 && value3.length==1 &&value4.length==1){
+        alert("PAYMENT SUCESSFUL")
+    }else{
+        alert("Inavalid PASSCODE")
+    }
+})
+
+
+</script>
