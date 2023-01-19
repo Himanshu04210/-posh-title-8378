@@ -42,6 +42,9 @@
                             <input type="text" placeholder="Search for products, Brand or Catogery"
                                 id="nav-bar-inputSearch">
                         </div>
+                        <div class="searchIcon">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3-MgVsMBSkvUHrAhZAVtoDV4l1U8I1P1t66QXbbTkgZj8u4LbEdqII9YJH0lLB584mw&usqp=CAU" id="searchicon">
+                        </div>
                         <div id="MyOrders">
                             <img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR42KekUZEM22SY1PI5czIdc0it0hARUX6Xg&usqp=CAU">
@@ -53,7 +56,7 @@
                             <p>No Items in<br>the Bag
                             <p>
                         </div>
-                        <div id="Login-Signup">
+                        <div id="Login-Signup" onClick={signInPopup()}>
                             <img
                                 src="https://thumbs.dreamstime.com/z/emoji-smart-smiling-orange-glasses-isolated-vector-cute-smile-wearing-smiley-fruit-flat-design-emoticon-icon-white-97249919.jpg">
                             <p>LogIn/SignUp</p>
@@ -82,10 +85,6 @@
             <!-- ///////////Corousel Part//////////////////// -->
 
 
-            <div id="logo-1" class="logo"></div>
-            <div id="logo-2" class="logo"></div>
-            <div id="logo-3" class="logo"></div>
-
         </div>
         <!-- //////////////Search-Dropdown//////////////////// -->
 
@@ -101,11 +100,87 @@
                 <p>Peter England Gifts Cards</p>
             </div>
         </div>
+        
         <!-- Brand logos  -->
         <div id="logo-1" class="logo"></div>
         <div id="logo-2" class="logo"></div>
         <div id="logo-3" class="logo"></div>
         <!--  Brand logos ended -->
+
+<!-- *************************** LOG-IN PAGE STARTS HERE********************************** -->
+
+        <form id="myForm">
+            <div class="sign-in-page hidden">
+                <div id="sign-in-page-text">Sign In</div>
+                <div id="cross"onClick={closeModal()} class="crossButton">x</div>
+                
+                <input type="e-mail" placeholder="Email Address" id="e-mail-signin-page"><br>
+                <input type="password" placeholder="Password" id="password-signin-page"><br>
+        
+                <div class="rem-forget">
+                    <div class="checkbox-align">
+                        <div>Remember me</div>
+                        <!-- <input type="checkbox" id="remember-me">
+                        <label for="remember-me" id="Remember-me">Remember me</label> -->
+                    </div>
+                    <div>
+                        <span id="forget-password"> Forget Password?</span>
+                    </div>
+        
+                </div>
+        
+                <div class="sign-in-now">SIGN IN NOW</div>
+                <p class="privacy-policy">This site is protected by reCAPTCHA and the Google<br><u>Privacy Policy</u> and <u>Terms of Service</u> apply
+                </p>
+                <hr>
+                <div class="dont-have-account">
+                    <div class="dont-have-account-left">Don't have a account?</div>
+                    <div class="dont-have-account-right" onClick={signUpPopup()}>Sign-up now</div>
+                    
+                </div>
+                <div class="login-as-admin">Login as Admin</div>
+            </div>
+           </form>
+
+        <div class="signinpage-background hidden">
+
+        </div>
+        <!-- ////////////////////////////sign-up-form//////////////////////////////// -->
+        
+        <div class="sign-up-page hidden">
+        
+            <div id="sign-up-page-text">Sign Up</div>
+            <p class="cross-signup" onClick={closesignup()}>x</p>
+            
+            <input type="e-mail" placeholder="Email Address" id="e-mail-signup-page"><br>
+            <input type="password" placeholder="Password" id="password-signup-page"><br>
+            <select name="Country" id="country-select">
+                <option value="India">India</option>
+                <option value="America">America</option>
+                <option value="Sydney">Sydney</option>
+                <option value="United States">United States</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Hong Kong">Hong Kong</option>
+            </select>
+        
+            <div class="remember-forget">
+                <!-- <div class="checkbox">
+                    <label for="remember-me" id="Remember"></label>
+                </div> -->
+        
+            </div>
+        
+            <div class="sign-up-now">CREATE AN ACCOUNT</div>
+            <p class="privacy">By clicking "Create an Account", you agree to our<br><u>Terms of Use</u> and <u>Privacy Policy</u>,including the<u>Use of Cookies</u>and the transfer of your personal information to the United States, a juridiction that may not provide an equivalent level of data protection to the laws in your home country. 
+            </p>
+            <hr>
+            <div class="already-have-account">
+                <div class="already-have-account-left">Already have an account?</div>
+                <div class="already-have-account-right" onClick={signInPopup()}{closesignup()}{signinpop()}>Sign In</div>
+            </div>
+        </div>
+        
+
 
         <!-- SLIDER ONE -->
         <h1 id="slidehead">Grocery & Home Furnishing</h1>
