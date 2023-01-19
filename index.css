@@ -1,4 +1,4 @@
-#main{
+#main {
     width: 95%;
     margin: auto;
 }
@@ -17,7 +17,7 @@
     padding: 0;
     margin: 0%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-    /* background-color: whitesmoke; */
+
 }
 
 /* .main-wesite-navbar{
@@ -29,7 +29,7 @@
     background-color: white;
     height: 6vh;
     display: flex;
-    width: 98%;
+    width: 95%;
     margin-left: 1%;
     /* background-color: red; */
 }
@@ -41,7 +41,7 @@
 .menu-shopbyCategory {
     border: 2px solid grey;
     height: 5.9vh;
-    width: 16%;
+    width: 18%;
 
 }
 
@@ -213,9 +213,9 @@ label div:last-child {
 /* /////////////////////search-bar-dropDown////////////////////////// */
 
 
-.searchBox{
+.searchBox {
     width: 44%;
-    position:absolute;
+    position: absolute;
     background-color: white;
     top: -4.9%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
@@ -226,161 +226,186 @@ label div:last-child {
     margin-left: 17.5%;
     display: none;
     /* border: 1px solid red; */
- }
- .popular-search{
+}
+
+.popular-search {
     color: orangered;
- }
+}
 
 /* logo */
-.logo{
+.logo {
     display: flex;
     gap: 10px;
-    
+
 }
-.logo>div{
+
+.logo>div {
     border-radius: 50px;
 }
-.logo img{
+
+.logo img {
     border-radius: 100px;
     border: 1px solid gray;
 }
+
 .logo h5 {
     text-align: center;
     margin-bottom: 0px;
     font-size: 18px;
 }
-.corousel-image{
+
+.corousel-image {
     border-radius: 50%;
     width: 50%;
 }
-.box1, .box2, .box3{
-    margin-top:5%;
+
+.box1,
+.box2,
+.box3 {
+    margin-top: 5%;
     margin-left: 4%;
 
 }
 
 
-    /* Four Divs */
-    #four-div{
-        display: flex;
-        margin-top: 80px;
-    }
+/* Four Divs */
+#four-div {
+    display: flex;
+    margin-top: 80px;
+}
 
-    #four-div img{
-        width: 25px;
-        height: 25px;
-        display: block;
-        margin: auto;
-        /* border: 1px solid red; */
-    }
-    #four-div h4{
-        margin-top: 0px;
-        text-align: center;
-    }
-    /* slider One */
+#four-div img {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: auto;
+    /* border: 1px solid red; */
+}
 
-    .transition1{
-        overflow: hidden;
-        border: 2px solid rgb(253, 253, 253);
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-        text-align: center;
-        font-weight: 700;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        #transition1>div>img:hover {
-         transform: scale(1.1); 
-         transition: all 1s;
-       }
-        
-        #transition1>div{ 
-         overflow: hidden;
-         border: 2px solid white;
-        }
-     
-     
-        /* SECOND SLIDER */
-        body {
-         margin: 0;
-         padding: 0;
-        }
-        #transition2{
-        overflow: hidden;
-        border: 2px solid white;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-        text-align: center;
-        font-weight: 700;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        #transition2>div>img:hover {
-         transform: scale(1.1); 
-        }
-        #transition2>div> img {   
-            transition: all 1s;
-        }
-        #transition2>div{ 
-         overflow: hidden;
-         border: 2px solid white;
-        }
-     
-        /* sliderheadings */
-     
-        #slidehead{
-         text-align: center;
-         font-weight: 700;
-         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
+#four-div h4 {
+    margin-top: 0px;
+    text-align: center;
+}
 
-        /* Footer  */
-        #aboutus{
-            background-color: #F4F5F4;
-            padding: 20px 0px;
-            display: grid;
-            grid-template-columns: 8fr 4fr;
-            
-        }
-        
-        #aboutus>:nth-child(1){
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-around;
-            vertical-align: middle;
-            
-        }
-        #aboutus>:nth-child(2){
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-around;
-            vertical-align: middle;
-            
-        }
-        #seller{
-            display: flex;
-            justify-content: space-between;
-            /* align-items: center; */
-            background-color: #FEFFFE;
-            padding: 10px;
-            margin:5px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-        #seller2{
-            display: flex;
-            /* border: 1px solid red; */
-            gap:5px;
-        }
-        #seller2>div{
-            border: 1px solid rgb(123, 189, 243);
-        }
-        
-        #everything>:nth-child(2){
-            display: grid;
-            grid-template-columns:repeat(4,1fr);
-            gap:10px;
-            margin: 20px;
-          
-        }
+/* slider One */
+
+.transition1 {
+    /* background-color: red; */
+    overflow: hidden;
+    border: 2px solid rgb(253, 253, 253);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#transition1>div>img:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+#transition1 img{
+    width: 100%;
+}
+
+#transition1>div {
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+
+/* SECOND SLIDER */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#transition2 {
+    overflow: hidden;
+    border: 2px solid white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#transition2>div>img:hover {
+    transform: scale(1.1);
+}
+
+#transition2>div>img {
+    transition: all 1s;
+    width: 100%;
+}
+
+#transition2>div {
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+/* sliderheadings */
+
+#slidehead {
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Footer  */
+#aboutus {
+    background-color: #F4F5F4;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+
+}
+
+#aboutus>:nth-child(1) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+
+}
+
+#aboutus>:nth-child(2) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+
+}
+
+#seller {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    background-color: #FEFFFE;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#seller2 {
+    display: flex;
+    /* border: 1px solid red; */
+    gap: 5px;
+}
+
+#seller2>div {
+    border: 1px solid rgb(123, 189, 243);
+}
+
+#everything>:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px;
+
+}
