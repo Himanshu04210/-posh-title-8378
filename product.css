@@ -11,6 +11,16 @@
    
 }
 
+/* Modified for product page */
+#main-website-logo-image {
+    width: 6%;
+    margin-left: 45%;
+}
+
+nav{
+    margin-bottom: 25px;
+}
+/* Modified for product page ended*/
 
 * body {
     padding: 0;
