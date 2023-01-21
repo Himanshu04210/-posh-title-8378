@@ -143,6 +143,7 @@ window.addEventListener("load", () => {
 })
 
 function renderProducts(fullData) {
+    container.innerHTML = null;
     fullData.map((item) => {
         let tr = document.createElement("tr");
         let id = document.createElement("td");

@@ -238,5 +238,14 @@ const signInPopup = () => {
   
 //////////////////sign in/signup functionality end////////////////////////////////////////  
 
+let searchBtn = document.getElementById("searchicon");
+searchBtn.addEventListener("click",function(){
+  // console.log("Yes");
+  let product = document.getElementById("nav-bar-inputSearch");
+  // console.log(product.value);
+  localStorage.setItem("productName",product.value);
+  window.location.href = "product.html"
+})
+
 
 
