@@ -24,13 +24,13 @@ operation.addEventListener("change", function () {
         <label class="labelDesc">Enter Description</label><br>
         <input type="text" placeholder="Description" id="Description"><br>
         <label class="labelPrice">Enter Price</label><br>
-        <input type="number" placeholder="Enter price" id="priceInput"><br>
+        <input type="text" placeholder="Enter price" id="priceInput"><br>
         <button class="submitPost" id="submitPost">Submit</button>
      </form>`
         let submitPost = document.getElementById("submitPost");
         let inputID = document.getElementById("inputID")
         submitPost.addEventListener("click", (e) => {
-            e.preventDefault()
+            // e.preventDefault()
             let promise = fetch("https://paytm-mall-api-m9h3.onrender.com/Electonics/",
                 {
                     method: "POST",
@@ -65,7 +65,7 @@ operation.addEventListener("change", function () {
         <button class="submitPost" id="submitPut">Submit</button>
      </form>`;
      submitPut.addEventListener("click", (e) => {
-            e.preventDefault()
+            // e.preventDefault()
             let promise = fetch(`https://paytm-mall-api-m9h3.onrender.com/Electonics/${inputID.value}`,
                 {
                     method: "PUT",
@@ -73,7 +73,7 @@ operation.addEventListener("change", function () {
                         "content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        Image: ImageInput.value,
+                        image: ImageInput.value,
                         Description: Description.value,
                         price: priceInput.value
                     })
@@ -96,7 +96,7 @@ operation.addEventListener("change", function () {
         <button class="submitPost" id="submitPatch">Update</button>
         </form>`
         submitPatch.addEventListener(("click"), (e) => {
-            e.preventDefault();
+            // e.preventDefault();
             let promise = fetch(`https://paytm-mall-api-m9h3.onrender.com/Electonics/${inputID.value}`,
                 {
                     method: "PATCH",
@@ -117,7 +117,7 @@ operation.addEventListener("change", function () {
         <button class="submitPost" id="submitDelete">Delete</button>
         </form>`
         submitDelete.addEventListener(("click"), (e) => {
-            e.preventDefault();
+            // e.preventDefault();
             let promise = fetch(`https://paytm-mall-api-m9h3.onrender.com/Electonics/${inputID.value}`,
                 {
                     method: "DELETE",
@@ -143,6 +143,7 @@ window.addEventListener("load", () => {
 })
 
 function renderProducts(fullData) {
+    container.innerHTML = null;
     fullData.map((item) => {
         let tr = document.createElement("tr");
         let id = document.createElement("td");
