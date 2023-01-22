@@ -378,14 +378,13 @@ input{
     /* background-color: rgb(207, 207, 183); */
     transform: scale(1.10);
 }
-
 /* **********************************sign-in page********************************************* */
 
 .signinpage-background{
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     height: 150vh;
     background-color: black;
     opacity: 0.3;
@@ -396,12 +395,15 @@ input{
     margin-bottom: 5%;
     cursor: pointer;
 }
+.hidden {
+    display: none;
+}
 .sign-in-page {
     width: 30%;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     top : 15%;
     right : 35%;
     background-color: whitesmoke;
@@ -470,8 +472,9 @@ input{
 }
 .dont-have-account{
     padding-top: 5%;
-    padding-bottom: 15%;
+    padding-bottom: 5%;
     display: flex;
+    margin: 0;
     justify-content: space-around;
 }
 .dont-have-account-left{
@@ -584,36 +587,7 @@ input{
     cursor: pointer;
     margin-top: -15%; 
 }
-.hidden{
-    display: none;
-}
 
-<<<<<<< Updated upstream
-
-/* pagination Buttons */
-#btn{
-    padding-top: 2%;
-    padding-left: 45%;
-}
-
-/* Card */
-#card{
-    display: none;
-}
-#card-classification:hover #card{
-    display: block;
-}
-
-#card > button{
-    display: block;
-    margin: auto;
-    margin-top: 5px;
-    border: none;
-    background-color: transparent;
-    font-size: larger;
-    cursor: pointer;
-}
-=======
 /* **********************LOGIN-AS -ADMIN******************************** */
 .login-Admin{
     margin:auto;
@@ -672,4 +646,4 @@ padding-top: 5%;
 .hidden{
     display: none;
 }
->>>>>>> Stashed changes
+

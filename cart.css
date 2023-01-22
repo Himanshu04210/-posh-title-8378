@@ -45,6 +45,7 @@
     margin: auto;
 }
 
+
 #main-website-logo-image {
     width: 6%;
     margin-left: 45%;
@@ -59,20 +60,19 @@
     padding: 0;
     margin: 0%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-    
+
 }
 
 /* .main-wesite-navbar{
     padding: 2%;
 } */
 .nav-elements {
-    /* position: absolute; */
-    position:relative;
-    z-index: 4;
-    background-color: rgb(250, 246, 246);
+    position: absolute;
+    z-index: 2;
+    background-color: white;
     height: 6vh;
     display: flex;
-    width: 98%;
+    width: 95%;
     margin-left: 1%;
     /* background-color: red; */
 }
@@ -84,7 +84,7 @@
 .menu-shopbyCategory {
     border: 2px solid grey;
     height: 5.9vh;
-    width: 16%;
+    width: 18%;
 
 }
 
@@ -146,29 +146,37 @@ label div:last-child {
 }
 
 
+
 #nav-bar-inputSearch {
     margin-left: 8%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-    width: 400%;
+    width: 350%;
     padding: 4%;
     height: 4vh;
     border: 1px solid grey;
     outline: none;
 }
 
-#search-icon {
-    width: 4%;
-    border: 1px solid olivedrab;
+.searchIcon{
+    /* width: 60%; */
+    cursor: pointer;
+    margin-left: 29%;
+    
+    /* margin-bottom: -10px; */
+}
+#searchicon{
+    margin-top: 2%;
+    width: 15%;
+ 
 }
 
 #MyOrders {
     display: flex;
-    margin-left: 40%;
+    margin-left: -10%;
     height: 4vh;
     width: 10%;
     cursor: pointer;
 }
-
 #MyOrders img {
     margin-top: 5%;
     height: 4.2vh;
@@ -256,23 +264,25 @@ label div:last-child {
 /* /////////////////////search-bar-dropDown////////////////////////// */
 
 
-.searchBox{
+.searchBox {
     width: 44%;
-    position:absolute;
+    position: absolute;
     background-color: white;
     top: -4.9%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 2%;
-    margin-top: 10%;
+    margin-top: 12%;
     margin-right: 5%;
     margin-left: 17.5%;
     display: none;
+    z-index: 2;
     /* border: 1px solid red; */
- }
- .popular-search{
+}
+
+.popular-search {
     color: orangered;
- }
+}
 
 /* logo */
 .logo{
@@ -354,3 +364,274 @@ label div:last-child {
             margin: 20px;
           
         }
+
+        /* ******************log-in/sign-up**************** */
+        
+/* **********************************sign-in page********************************************* */
+
+.signinpage-background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    height: 150vh;
+    background-color: black;
+    opacity: 0.3;
+}
+.login-as-admin{
+    color: blue;
+    text-align: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.sign-in-page {
+    width: 30%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    z-index: 4;
+    top : 15%;
+    right : 35%;
+    background-color: whitesmoke;
+}
+
+#sign-in-page-text {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 3%;
+    padding-bottom: 5%;
+}
+
+#e-mail-signin-page {
+    margin-left: 13%;
+    padding: 2.5% 15%;
+    margin-bottom: 3%;
+    border-radius: 1%;
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+}
+
+#password-signin-page {
+    margin-left: 13%;
+    padding: 2.5% 15%;
+    margin-bottom: 3%;
+    border-radius: 1%;
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+}
+
+
+.rem-forget {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+}
+.checkbox-align{
+    margin-left: 3%;
+}
+#forget-password{
+    color: blue;
+    margin-top: 6%;
+    margin-right: 0%;
+}
+.sign-in-now{
+    width: 67%;
+    margin: auto;
+    border: 1px solid grey;
+    padding: 2% 4%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: soleil, Helvetica, Arial, sans-serif;
+}
+.privacy-policy{
+    margin-left: 10%;
+    font-size: 14px;
+    padding-bottom: 15%;
+    padding-top: 5%;
+}
+.dont-have-account{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+}
+.dont-have-account-left{
+    margin-left: 12%;
+
+}
+.dont-have-account-right{
+    margin-right: 15%;
+    color: blue;
+    cursor: pointer;
+}
+#cross{
+    /* border: 1px solid red; */
+    padding: 5%;
+    margin-left: 85%;
+    cursor: pointer;
+    margin-top: -15%;   
+}
+
+/* ////////////////////////////sign-up-form///////////////////////////////////// */
+
+.sign-up-page {
+    width: 30%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    z-index: 4;
+    top : 15%;
+    right : 35%;
+    background-color: whitesmoke;
+}
+
+#sign-up-page-text {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 3%;
+    padding-bottom: 5%;
+}
+
+#e-mail-signup-page {
+    margin-left: 15%;
+    padding: 2.5% 15%;
+    margin-bottom: 3%;
+    border-radius: 1%;
+    border: 1px solid gainsboro;
+}
+
+#password-signup-page {
+    margin-left: 15%;
+    padding: 2.5% 15%;
+    margin-bottom: 3%;
+    border-radius: 1%;
+    border: 1px solid gainsboro;
+}
+
+#country-select{
+    margin-left: 15%;
+    margin-top: 3%;
+    padding: 2.5% 22%;
+}
+.remember-forget {
+    
+    margin-left: 9%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+}
+.checkbox{
+    margin-left: 3%;
+}
+
+.sign-up-now{
+    width: 67%;
+    margin: auto;
+    border: 1px solid grey;
+    padding: 2% 4%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: soleil, Helvetica, Arial, sans-serif;
+}
+.privacy{
+    margin-left: 10%;
+    font-size: 14px;
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+.already-have-account{
+    padding-top: 5%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+.already-have-account-left{
+    margin-left: 12%;
+
+}
+.already-have-account-right{
+    margin-right: 17%;
+    color: blue;
+    cursor: pointer;
+}
+.cross-signup{
+    padding: 5%;
+    margin-left: 85%;
+    cursor: pointer;
+    margin-top: -15%; 
+}
+
+/* **********************LOGIN-AS -ADMIN******************************** */
+.login-Admin{
+    margin:auto;
+    margin-top: 5%;
+    width: 30%;
+    position: absolute;
+    z-index: 4;
+    top : 5%;
+    right : 35%;
+    background-color: whitesmoke;
+    /* border: 1px solid blue; */
+    height: 80vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cross-admin{
+    margin-left: 93%;
+    margin-top: -14%;
+    cursor: pointer;
+    
+}
+
+.login-as-admin-heading{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 3%;
+    padding-top: 4%;
+    margin-bottom: 8%;
+}
+.inputOfAdmin{
+    width: 60%;
+    height: 5vh;
+    margin: 2%;
+    margin-left: 18%;
+    outline: none;
+}
+.Admin-submit{
+    width: 60%;
+    height: 6vh;
+    margin: 2%;
+    margin-left: 19%;
+    color: white;
+    background-color: teal;
+    border: none;
+    font-size: medium;
+  font-weight:600;
+  cursor: pointer;
+    border-radius: 7px;
+}
+.privacy-policy{
+margin-left: 10%;
+font-size: 14px;
+padding-bottom: 15%;
+padding-top: 5%;
+}
+.hidden{
+    display: none;
+}
