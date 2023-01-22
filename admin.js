@@ -159,12 +159,13 @@ function renderProducts(fullData) {
         // tr.style.border = "1px solid grey"
         let id = document.createElement("td");
         id.innerText = item.id;
+        let image = document.createElement("td");
+        image.innerHTML = `<img src=${item.Image}>`;
         let desc = document.createElement("td");
         desc.innerText = item.Description;
         let price = document.createElement("td");
         price.innerText = item.price;
-
-        tr.append(id, desc, price)
+        tr.append(id,image, desc, price)
         container.append(tr);
     })
 }
