@@ -7,14 +7,14 @@ window.addEventListener("load",function(){
     let product_name = localStorage.getItem("productName");
     category_name.innerText = product_name; 
     if(product_name === "Mobile" || product_name === "MOBILES" ||product_name === "MOBILE" || product_name === "Mobiles" || product_name === "mobile" || product_name === "mobiles"){
-        let promise = fetch("https://paytm-mall-api-withcatagory.onrender.com/Electonics/");
-        promise.then((res)=>{
-        return res.json();
+        let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=1`);
+    promise.then((res)=>{
+    return res.json();
 })
 .then((response)=>{
-    console.log(response);
-    fullData = response;
-    renderProducts(response);
+console.log(response);
+fullData = response;
+renderProducts(response);
 })
 }
     else if(product_name === "GiftCard" || product_name === "Giftcard" || product_name === "giftcard" ||product_name === "Gift Cards" || product_name === "Gift Card" || product_name === "Gift card"){
@@ -176,4 +176,107 @@ filttering.addEventListener("click",function(){
     })
     console.log(filteredData);
     renderProducts(filteredData);  
+})
+
+
+// pagination
+
+let btn1 = document.getElementById("btn1");
+
+btn1.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=1`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+ 
+})
+
+let btn2 = document.getElementById("btn2");
+
+btn2.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=2`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn3 = document.getElementById("btn3");
+
+btn3.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=3`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn4 = document.getElementById("btn4");
+
+btn4.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=4`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn5 = document.getElementById("btn5");
+
+btn5.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=5`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+// pagination ended
+
+
+// card-classification
+let wallets = document.getElementById("wallets");
+wallets.addEventListener("click",function(){
+    let data = fullData.filter((item)=>{
+        if(item.catagory === "wallets"){
+            return item;
+        }
+    })
+    renderProducts(data);
+})
+
+let fancy_toys = document.getElementById("fancy&toys");
+fancy_toys.addEventListener("click",function(){
+    let data = fullData.filter((item)=>{
+        if(item.catagory === "fancy&toys"){
+            return item;
+        }
+    })
+    renderProducts(data);
 })

@@ -571,3 +571,28 @@ input{
 .hidden{
     display: none;
 }
+
+
+/* pagination Buttons */
+#btn{
+    padding-top: 2%;
+    padding-left: 45%;
+}
+
+/* Card */
+#card{
+    display: none;
+}
+#card-classification:hover #card{
+    display: block;
+}
+
+#card > button{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+    cursor: pointer;
+}

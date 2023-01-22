@@ -228,10 +228,11 @@ label div:last-child {
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 2%;
-    margin-top: 10%;
+    margin-top: 12%;
     margin-right: 5%;
     margin-left: 17.5%;
     display: none;
+    z-index: 2;
     /* border: 1px solid red; */
 }
 

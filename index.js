@@ -256,4 +256,14 @@ searchBtn.addEventListener("click",function(){
 })
 
 
+// Admin Part
 
+let adminbtn = document.getElementById("adminbtn");
+let adminName = document.getElementById("adminName");
+let adminPassword = document.getElementById("adminPassword");
+adminbtn.addEventListener("click",function(){
+  if(adminName.value === "admin" && adminPassword.value === "admin"){
+    alert("Admin Login Successful");
+    window.location.href = "admin.html";
+  }
+})

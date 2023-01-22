@@ -5,7 +5,7 @@ console.log(operation.value)
 operation.addEventListener("change", function () {
     if (operation.value === "Get") {
         form.innerHTML = `FORM`
-        let promise = fetch("https://paytm-mall-api-m9h3.onrender.com/Electonics/");
+        let promise = fetch("https://paytm-mall-api-withcatagory.onrender.com/Electonics/");
         promise.then((res) => {
             // console.log(1);
             return res.json();
@@ -24,14 +24,14 @@ operation.addEventListener("change", function () {
         <label class="labelDesc">Enter Description</label><br>
         <input type="text" placeholder="Description" id="Description"><br>
         <label class="labelPrice">Enter Price</label><br>
-        <input type="number" placeholder="Enter price" id="priceInput"><br>
+        <input type="text" placeholder="Enter price" id="priceInput"><br>
         <button class="submitPost" id="submitPost">Submit</button>
      </form>`
         let submitPost = document.getElementById("submitPost");
         let inputID = document.getElementById("inputID")
         submitPost.addEventListener("click", (e) => {
-            e.preventDefault()
-            let promise = fetch("https://paytm-mall-api-m9h3.onrender.com/Electonics/",
+            e.preventDefault();
+            let promise = fetch("https://paytm-mall-api-withcatagory.onrender.com/Electonics/",
                 {
                     method: "POST",
                     headers: {
@@ -50,6 +50,7 @@ operation.addEventListener("change", function () {
                 .then((data) => {
                     console.log(data);
                 })
+            form.innerHTML = null;    
         })
     }
     else if (operation.value === "Put") {
@@ -61,12 +62,12 @@ operation.addEventListener("change", function () {
         <label class="labelDesc">Enter Description</label><br>
         <input type="text" placeholder="Description" id="Description"><br>
         <label class="labelPrice">Enter Price</label><br>
-        <input type="number" placeholder="Enter price" id="priceInput"><br>
+        <input type="text" placeholder="Enter price" id="priceInput"><br>
         <button class="submitPost" id="submitPut">Submit</button>
      </form>`;
      submitPut.addEventListener("click", (e) => {
-            e.preventDefault()
-            let promise = fetch(`https://paytm-mall-api-m9h3.onrender.com/Electonics/${inputID.value}`,
+        e.preventDefault();
+            let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/${inputID.value}`,
                 {
                     method: "PUT",
                     headers: {
@@ -84,6 +85,7 @@ operation.addEventListener("change", function () {
                 .then((data) => {
                     console.log(data);
                 })
+                form.innerHTML = null;   
         })
     }
 
@@ -92,12 +94,12 @@ operation.addEventListener("change", function () {
         <label class="labelid">Enter ID</label><br>
         <input type="number" placeholder="Enter your ID" id="inputID"><br>
         <label class="labelPrice">Enter Price</label><br>
-        <input type="number" placeholder="Enter price" id="priceInput"><br>
+        <input type="text" placeholder="Enter price" id="priceInput"><br>
         <button class="submitPost" id="submitPatch">Update</button>
         </form>`
         submitPatch.addEventListener(("click"), (e) => {
             e.preventDefault();
-            let promise = fetch(`https://paytm-mall-api-m9h3.onrender.com/Electonics/${inputID.value}`,
+            let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/${inputID.value}`,
                 {
                     method: "PATCH",
                     headers: {
@@ -107,7 +109,7 @@ operation.addEventListener("change", function () {
                         price: priceInput.value
                     })
                 })
-
+                form.innerHTML = null;   
         })
     }
     else if (operation.value === "Delete") {
@@ -118,29 +120,36 @@ operation.addEventListener("change", function () {
         </form>`
         submitDelete.addEventListener(("click"), (e) => {
             e.preventDefault();
-            let promise = fetch(`https://paytm-mall-api-m9h3.onrender.com/Electonics/${inputID.value}`,
+            let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/${inputID.value}`,
                 {
                     method: "DELETE",
                     headers: {
                         "content-Type": "application/json",
                     }
                 })
-
+                promise.then((res)=>{
+                    return res.json();
+                })
+                .then((data)=>{
+                    console.log(data);
+                })
+                form.innerHTML = null;   
         })
     }
 })
 let container = document.getElementById("tbody");
-window.addEventListener("load", () => {
-    let promise = fetch("https://paytm-mall-api-m9h3.onrender.com/Electonics/");
-    promise.then((res) => {
+window.addEventListener("load",()=>{
+    let promise = fetch("https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=1");
+    promise.then((res)=>{
         // console.log(1);
         return res.json();
     })
-        .then((response) => {
-            // console.log(2,3,response);
-            renderProducts(response);
-        })
+    .then((response)=>{
+        // console.log(2,3,response);
+        renderProducts(response);
+    })
 })
+
 
 function renderProducts(fullData) {
     container.innerHTML = null;
@@ -159,3 +168,83 @@ function renderProducts(fullData) {
         container.append(tr);
     })
 }
+
+// pagination
+
+let btn1 = document.getElementById("btn1");
+
+btn1.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=1`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+ 
+})
+
+let btn2 = document.getElementById("btn2");
+
+btn2.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=2`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn3 = document.getElementById("btn3");
+
+btn3.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=3`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn4 = document.getElementById("btn4");
+
+btn4.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=4`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn5 = document.getElementById("btn5");
+
+btn5.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=5`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+// pagination ended
