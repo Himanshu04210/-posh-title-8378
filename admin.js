@@ -146,6 +146,8 @@ function renderProducts(fullData) {
     container.innerHTML = null;
     fullData.map((item) => {
         let tr = document.createElement("tr");
+        tr.setAttribute("class","tr")
+        // tr.style.border = "1px solid grey"
         let id = document.createElement("td");
         id.innerText = item.id;
         let desc = document.createElement("td");

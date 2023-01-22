@@ -7,10 +7,13 @@
     <title>Admin</title>
 </head>
 <style>
+    *{
+        font-family:Arial, Helvetica, sans-serif;
+    }
     #main{
         display: flex;
-        width: 70%;
-        margin: auto;
+        width: 100%;
+        /* margin: auto; */
     }
     #form{
         width: 25%;
@@ -18,8 +21,90 @@
     #table-container{
         width: 70%;
     }
+    #operation{
+        margin-top: 3%;
+        margin-left: 2%;
+        width: 10%;
+        height: 8vh;
+        outline: none;
+        border-radius: 7%;
+        
+        /* border: 2px solid red; */
+    }
+option{
+background-color: white;
+}
+    #form{
+       
+        color: teal;
+        width: 50%;
+        padding: 2.5%;
+       
+    }
+    
+    /* .labelid{
+     
+
+    } */
+    .PostForm{
+        width: 60%;
+        height: 100vh;
+    }
+    #submitPost{
+        height: 8vh;
+        background-color: teal;
+        border-radius: 10px;
+        width: 81%;
+        color: white;
+        border: none;
+        margin-top: 4%;
+    }
+    #submitPut, #submitPatch, #submitDelete{
+        height: 8vh;
+        border-radius: 10px;
+        background-color: teal;
+        border: none;
+        width: 81%;
+        color: white;
+        margin-top: 4%;
+    }
+
+    #inputID, #ImageInput, #Description, #priceInput{
+        height: 6vh;
+        width: 80%;
+        margin-bottom: 4%;
+        outline: none;
+    }
+ .tr{
+    border: 1px solid grey;
+    padding: 4%;
+ }
+ table{
+    border-collapse: collapse;
+ }
+ td , th{
+    padding: 1%;
+ }
+ #main-ID{
+
+    padding: 0px 8px;
+ }
+ #main-Price{
+    padding: 0px 15px;
+ }
+ thead{
+    background-color: lightgray;
+ }
+ tr:nth-child(even){
+    background-color: lightgrey;
+ }
+select{
+    background-color: cyan;
+
+}
+ 
 </style>
-<body>   
+<body> 
     <select name="forms" id="operation">
             <option value="Get">GET</option>
             <option value="Post">POST</option>
@@ -30,11 +115,11 @@
     <div id="main">    
         <div id="form">FORM</div>
         <div id="table-container">
-            <table>
+            <table border="1">
                 <thead>
-                    <th>ID</th>
+                    <th id="main-ID">ID</th>
                     <th>Description</th>
-                    <th>Price</th>
+                    <th id="main-Price">Price</th>
                 </thead>
                 <tbody id="tbody"></tbody>
         </div>
