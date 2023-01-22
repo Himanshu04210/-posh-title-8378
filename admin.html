@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<style>
+    *{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #main{
+        display: flex;
+        width: 100%;
+        /* margin: auto; */
+    }
+    #form{
+        width: 25%;
+    }
+    #btn{
+    padding-top: 2%;
+    padding-left: 30%;
+    padding-bottom: 2%;
+}
+    #table-container{
+        width: 70%;
+    }
+    #operation{
+        margin-top: 3%;
+        margin-left: 2%;
+        width: 10%;
+        height: 5vh;
+        outline: none;
+        border-radius: 7%;
+        
+        /* border: 2px solid red; */
+    }
+option{
+background-color: white;
+}
+    #form{
+       
+        color: teal;
+        width: 50%;
+        padding: 2.5%;
+       
+    }
+    
+    /* .labelid{
+     
+
+    } */
+    .PostForm{
+        width: 60%;
+        height: 100vh;
+    }
+    #submitPost{
+        height: 5vh;
+        background-color: teal;
+        border-radius: 10px;
+        width: 81%;
+        color: white;
+        border: none;
+        margin-top: 4%;
+    }
+    #submitPut, #submitPatch, #submitDelete{
+        height: 5vh;
+        border-radius: 10px;
+        background-color: teal;
+        border: none;
+        width: 81%;
+        color: white;
+        margin-top: 4%;
+    }
+
+    #inputID, #ImageInput, #Description, #priceInput{
+        height: 6vh;
+        width: 80%;
+        margin-bottom: 4%;
+        outline: none;
+    }
+ .tr{
+    border: 1px solid grey;
+    padding: 4%;
+ }
+ table{
+    border-collapse: collapse;
+ }
+ td , th{
+    padding: 1%;
+ }
+ #main-ID{
+
+    padding: 0px 8px;
+ }
+ #main-Price{
+    padding: 0px 15px;
+ }
+ thead{
+    background-color: lightgray;
+ }
+ tr:nth-child(even){
+    background-color: lightgrey;
+ }
+select{
+    background-color: cyan;
+
+}
+.admin-heading-main{
+display: flex;
+}
+ #welcome-admin{
+    margin-left: 40%;  
+    color: teal;
+ }
+ #nav-admin{
+    cursor: pointer;
+    margin-left: 30%;
+ }
+ /* ****************************************Admin-Logout**************************** */
+ .logout-container{
+    position: absolute;
+    top: 1%;
+    left: 26%;
+        padding: 2%;
+        margin: auto;
+        margin-top: 10%;
+        width: 40%;
+        height: 20vh;
+        background-color: whitesmoke;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #are-you-sure{
+        color: teal;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #yes{
+        margin-left: 36%;
+        background-color:  darkolivegreen;
+        border: none;
+        padding: 1%;
+        color: white;
+        border-radius: 8%;
+        cursor: pointer;
+    }
+    #no{
+        margin-left: 4%;
+        background-color: darkolivegreen;
+        border: none;
+        padding: 1%;
+        color: white;
+        border-radius: 8%;
+        cursor: pointer;
+    }
+    .hidden{
+        display: none;
+    }
+    /* tbody */
+    #tbody img{
+    width: 80%;
+    margin: auto;
+    height: 80px;
+ }
+</style>
+<body>
+    <div class="admin-heading-main">
+        <h1 id="welcome-admin">Welcome Back, Admin</h1>
+        <h3 id="nav-admin" onClick={Adminpopup()}>Admin</h3>
+    </div>
+   
+    <select name="forms" id="operation">
+            <option value="Get">GET</option>
+            <option value="Post">POST</option>
+            <option value="Put">PUT</option>
+            <option value="Patch">PATCH</option>
+            <option value="Delete">DELETE</option>
+    </select>
+    <div id="main">    
+        <div id="form">FORM</div>
+        <div id="table-container">
+            <table border="1">
+                <thead>
+                    <th id="main-ID">ID</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th id="main-Price">Price</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+        </div>
+    </div>
+    <div id="btn">
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+        <button id="btn4">4</button>
+        <button id="btn5">5</button>
+    </div>
+    <div class="logout-container hidden">
+        <h1 id="are-you-sure">Are you sure, you want to Log-out?</h1>
+        <button id="yes" onClick={YES()}>YES</button>
+        <button id="no" onClick={NO()}>NO</button>
+       </div>
+</body>
+<script src="admin.js"></script>
+</html>

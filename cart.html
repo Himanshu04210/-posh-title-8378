@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/a8f572849d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <body>
+        <div id="main">
+            <div class="container">
+                <nav>
+                    <div class="main-wesite-navbar">
+                        <div class="website-logo">
+                            <img id="main-website-logo-image" src="Icons\Digital Dealz.png">
+                        </div>
+                        <div class="nav-elements">
+                            <div class="menu-shopbyCategory">
+                                <input type="checkbox" id="menu_checkbox">
+                                <label for="menu_checkbox">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </label>
+                                <div id="shopByCategory">
+                                    <h3>Shop by Category</h3>
+                                </div>
+    
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Search for products, Brand or Catogery"
+                                    id="nav-bar-inputSearch">
+                            </div>
+                            <div class="searchIcon">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3-MgVsMBSkvUHrAhZAVtoDV4l1U8I1P1t66QXbbTkgZj8u4LbEdqII9YJH0lLB584mw&usqp=CAU" id="searchicon">
+                            </div>
+                            <div id="MyOrders">
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR42KekUZEM22SY1PI5czIdc0it0hARUX6Xg&usqp=CAU">
+                                <p>My Orders</p>
+                            </div>
+                            <div id="Cart-navBar">
+                                <img
+                                    src="https://w7.pngwing.com/pngs/985/202/png-transparent-shopping-bag-icon-orange-shopping-bag-text-logo-coffee-shop.png">
+                                <p style="margin-top:6%">Cart
+                                <p>
+                            </div>
+                            <div id="Login-Signup" onClick={signInPopup()}>
+                                <img
+                                    src="https://thumbs.dreamstime.com/z/emoji-smart-smiling-orange-glasses-isolated-vector-cute-smile-wearing-smiley-fruit-flat-design-emoticon-icon-white-97249919.jpg">
+                                <p>LogIn/SignUp</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </nav>
+    
+    
+                <div class="shopByCatogery-DropDown">
+                    <div class="gift-cards">
+                        <p>GIFT CARDS</p>
+                    </div>
+                    <div class="gift-cards-contents">
+                        <p>Fashion</p>
+                        <p>Jewellery</p>
+                        <p>Furniture & Electronics</p>
+                        <p>Entertainment</p>
+                        <p>Beauty and Health</p>
+                        <p>Travel and Holidays</p>
+                    </div>
+                </div>
+            </div>
+            <!-- //////////////Search-Dropdown//////////////////// -->
+    
+            <div class="searchBox">
+                <h4 class="popular-search">Popular Search</h4>
+                <div class="popular-search-contents">
+                    <p>Central Gifts Cards</p>
+                    <p>Big Baskets Gifts Cards</p>
+                    <p>Croma Gifts Cards</p>
+                    <p>Kalyan Jewellers Gifts Cards</p>
+                    <p>Myntra Gifts Cards</p>
+                    <p>More Gifts Cards</p>
+                    <p>Peter England Gifts Cards</p>
+                </div>
+            </div>
+        
+                <!-- ///////////Corousel Part//////////////////// -->
+        
+        
+                <div id="logo-1" class="logo"></div>
+                <div id="logo-2" class="logo"></div>
+                <div id="logo-3" class="logo"></div>
+        
+            </div>
+            <!-- //////////////Search-Dropdown//////////////////// -->
+        
+            <div class="searchBox">
+                <h4 class="popular-search">Popular Search</h4>
+                <div class="popular-search-contents">
+                    <p>Central Gifts Cards</p>
+                    <p>Big Baskets Gifts Cards</p>
+                    <p>Croma Gifts Cards</p>
+                    <p>Kalyan Jewellers Gifts Cards</p>
+                    <p>Myntra Gifts Cards</p>
+                    <p>More Gifts Cards</p>
+                    <p>Peter England Gifts Cards</p>
+                </div>
+            </div>
+            <!-- Brand logos  -->
+            <div id="logo-1" class="logo"></div>
+            <div id="logo-2" class="logo"></div>
+            <div id="logo-3" class="logo"></div>
+            <!--  Brand logos ended -->
+            <div id="cart">
+                <div id="cartproduct">
+                
+                </div>
+        
+                <div id="productprice">
+                    <div>
+                        <h3>Bag Total</h3>
+                        <h3 id="bag_price"></h3>
+                             
+                        
+                    </div>
+                    <div>
+                        <h3>Shipping Charge</h3>
+                        <p id="green">Free</p>
+                    </div>
+                    <div>
+                        <h3>Amount Payable</h3>
+                        <h3><span> </span> <span id="total"></span></h3>
+                    </div>
+                    <button id="pay">Proceed to payment</button>
+        
+                </div>
+        
+            </div>
+            
+           <!--------ABOUT US SECTION--  -->
+         
+        <div id="aboutus">
+            <div >
+                <a href="">About Us</a>
+                <a href="">Partner with us</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">Blog</a>
+                <a href="">Media</a>
+                <a href="">24x7 Help</a>
+                <a href="">Grievance policy</a>
+                <a href="">Bug bounty</a>
+                <a href="">Return/Cancellation policy</a>
+            </div>
+            <div>
+                <img width="30px" src="Icons\apple.png" alt="">
+                <img width="30px" src="Icons\windows-logo.png" alt="">
+                <img width="30px" src="Icons\android.png" alt="">
+                <img width="30px" src="Icons\twitter.png" alt="">
+                <img width="30px" src="Icons\facebook.png" alt="">
+                <img width="30px" src="Icons\youtube.png" alt="">
+            </div>   
+        </div>
+        <div id="seller">
+            <div >
+                <img width="40px" src="Icons\verified_visa_icon.png" alt="">
+                <img width="60px" src="Icons\mastercard_curved_icon.png" alt="">
+                <img width="50px" src="Icons\dbs.png" alt="">
+                <img width="30px" src="Icons\bank_card_payment_rupay_icon.png" alt="">
+                <img width="50px" src="Icons\american.png" alt="">
+                <!-- <img width="30px" src="Icons\youtube.png" alt=""> -->
+            </div>
+            <div id="seller2">
+                <div>
+                    <img  width="60px" src="Icons\Digital Dealz.png" alt="">
+                    <!-- <p>Become a Seller</p> -->
+                </div>
+                <div>
+                    <img width="50px" src="Icons\wallet.png" alt="">
+                    <!-- <p>Payment Services</p> -->
+                </div>
+            </div>   
+         </div>
+         <!--------------------------    Footer Section -->
+        
+         <div id="everything">
+            <p>From Electronics,Fashion to Cars: Buy Everything Online from the Convenience of Your Home from Paytm Mall
+            </p>
+            <div>
+                <p>Electronics <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Mobiles <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Car & bike <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Super Market <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Men's Fashion <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Home & Kitchen <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Baby,Kids & Toys <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Car & Bike Accessories <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Stationery <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Travel Cards <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Women's Fashion <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+                <p>Sports & Fitness <i class="fa-solid fa-angle-down"></i>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        
+        
+        </div>
+        </body>
+    <!----------------------------------------- CART -->
+
+    <!-- ********************login-in/sign-up******************************* -->
+    
+<!-- *************************** LOG-IN PAGE STARTS HERE********************************** -->
+
+<form id="myForm">
+    <div class="sign-in-page hidden">
+        <div id="sign-in-page-text">Sign In</div>
+        <div id="cross"onClick={closeModal()} class="crossButton">x</div>
+        
+        <input type="e-mail" placeholder="Email Address" id="e-mail-signin-page"><br>
+        <input type="password" placeholder="Password" id="password-signin-page"><br>
+
+        <div class="rem-forget">
+            <div class="checkbox-align">
+                <div>Remember me</div>
+                <!-- <input type="checkbox" id="remember-me">
+                <label for="remember-me" id="Remember-me">Remember me</label> -->
+            </div>
+            <div>
+                <span id="forget-password"> Forget Password?</span>
+            </div>
+
+        </div>
+
+        <div class="sign-in-now">SIGN IN NOW</div>
+        <p class="privacy-policy">This site is protected by reCAPTCHA and the Google<br><u>Privacy Policy</u> and <u>Terms of Service</u> apply
+        </p>
+        <hr>
+        <div class="dont-have-account">
+            <div class="dont-have-account-left">Don't have a account?</div>
+            <div class="dont-have-account-right" onClick={signUpPopup()}>Sign-up now</div>
+            
+        </div>
+        <div class="login-as-admin" onClick={loginpagepopup()}>Login as Admin</div>
+    </div>
+   </form>
+
+<div class="signinpage-background hidden">
+
+</div>
+<!-- ////////////////////////////sign-up-form//////////////////////////////// -->
+
+<div class="sign-up-page hidden">
+
+    <div id="sign-up-page-text">Sign Up</div>
+    <p class="cross-signup" onClick={closesignup()}>x</p>
+    
+    <input type="e-mail" placeholder="Email Address" id="e-mail-signup-page"><br>
+    <input type="password" placeholder="Password" id="password-signup-page"><br>
+    <select name="Country" id="country-select">
+        <option value="India">India</option>
+        <option value="America">America</option>
+        <option value="Sydney">Sydney</option>
+        <option value="United States">United States</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Hong Kong">Hong Kong</option>
+    </select>
+
+    <div class="remember-forget">
+        <!-- <div class="checkbox">
+            <label for="remember-me" id="Remember"></label>
+        </div> -->
+
+    </div>
+
+    <div class="sign-up-now">CREATE AN ACCOUNT</div>
+    <p class="privacy">By clicking "Create an Account", you agree to our<br><u>Terms of Use</u> and <u>Privacy Policy</u>,including the<u>Use of Cookies</u>and the transfer of your personal information to the United States, a juridiction that may not provide an equivalent level of data protection to the laws in your home country. 
+    </p>
+    <hr>
+    <div class="already-have-account">
+        <div class="already-have-account-left">Already have an account?</div>
+        <div class="already-have-account-right" onClick={signInPopup()}{closesignup()}{signinpop()}>Sign In</div>
+    </div>
+</div>
+<!-- ***********************************Login-as-admin form********************************** -->
+
+<div class="login-Admin hidden">
+    <div class="login-as-admin-heading">LOG-IN AS ADMIN</div>
+    <p class="cross-admin" onClick={Admincross()}>x</p>
+    <input type="text" placeholder="Enter Username" class="inputOfAdmin" id="adminName"><br>
+    <input type="password" placeholder="Enter Password" class="inputOfAdmin" id="adminPassword"><br>
+    <button class="Admin-submit" id="adminbtn">LOGIN</button>
+    <p class="privacy-policy">This site is protected by reCAPTCHA and the Google<br><u>Privacy Policy</u> and <u>Terms of Service</u> apply
+    </p>
+ </div>
+
+<!-- ***********************************login-as-admin ends here******************************* -->
+
+   <script src="cart.js"></script>
+</body>
+</html>
