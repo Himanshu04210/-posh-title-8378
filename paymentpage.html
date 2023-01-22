@@ -121,7 +121,7 @@ margin:auto;
     width:80%;
     margin: 20px;
     background-color: blue;
-    color: azure;
+    /* color: azure; */
     border-radius: 30px;
     text-align: center;
     
@@ -170,7 +170,7 @@ margin:auto;
                 <input id="value3" type="text">
                 <input id="value4" type="text">
             </div>
-            <div id="amount"><h3>PAY 2000</h3>PAY 2000</div>
+            <div id="amount"><h3 class="pay2"></h3></div>
             </div>
 
         <div id="card">
@@ -181,7 +181,7 @@ margin:auto;
 <input  id="cv" type="text" placeholder="CVV">
 
 <div id="pay">
-<h3>PAY 2000</h3>
+<h3 class="pay"></h3>
 </div>
 
 
@@ -278,5 +278,10 @@ amount.addEventListener("click",()=>{
     }
 })
 
-
+let pay1=document.querySelector(".pay");
+let total=JSON.parse(localStorage.getItem("total"))||0;
+pay1.innerHTML="PAY "+`${total}`;
+console.log(total)
+let pay2=document.querySelector(".pay2");
+pay2.innerHTML="PAY "+`${total}`;
 </script>
