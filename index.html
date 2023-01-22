@@ -138,7 +138,7 @@
                     <div class="dont-have-account-right" onClick={signUpPopup()}>Sign-up now</div>
                     
                 </div>
-                <div class="login-as-admin">Login as Admin</div>
+                <div class="login-as-admin" onClick={loginpagepopup()}>Login as Admin</div>
             </div>
            </form>
 
@@ -179,7 +179,19 @@
                 <div class="already-have-account-right" onClick={signInPopup()}{closesignup()}{signinpop()}>Sign In</div>
             </div>
         </div>
-        
+        <!-- ***********************************Login-as-admin form********************************** -->
+
+        <div class="login-Admin hidden">
+            <div class="login-as-admin-heading">LOG-IN AS ADMIN</div>
+            <p class="cross-admin" onClick={Admincross()}>x</p>
+            <input type="text" placeholder="Enter Username" class="inputOfAdmin"><br>
+            <input type="password" placeholder="Enter Password" class="inputOfAdmin"><br>
+            <button class="Admin-submit">LOGIN</button>
+            <p class="privacy-policy">This site is protected by reCAPTCHA and the Google<br><u>Privacy Policy</u> and <u>Terms of Service</u> apply
+            </p>
+         </div>
+
+        <!-- ***********************************login-as-admin ends here******************************* -->
 
         <!-- SLIDER ONE -->
         <h1 id="slidehead">Grocery & Home Furnishing</h1>

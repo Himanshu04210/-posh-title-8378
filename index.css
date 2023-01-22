@@ -626,3 +626,62 @@ body {
     cursor: pointer;
     margin-top: -15%; 
 }
+
+/* **********************LOGIN-AS -ADMIN******************************** */
+.login-Admin{
+    margin:auto;
+    margin-top: 5%;
+    width: 30%;
+    position: absolute;
+    z-index: 4;
+    top : 5%;
+    right : 35%;
+    background-color: whitesmoke;
+    /* border: 1px solid blue; */
+    height: 80vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cross-admin{
+    margin-left: 93%;
+    margin-top: -14%;
+    cursor: pointer;
+    
+}
+
+.login-as-admin-heading{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 3%;
+    padding-top: 4%;
+    margin-bottom: 8%;
+}
+.inputOfAdmin{
+    width: 60%;
+    height: 5vh;
+    margin: 2%;
+    margin-left: 18%;
+    outline: none;
+}
+.Admin-submit{
+    width: 60%;
+    height: 6vh;
+    margin: 2%;
+    margin-left: 19%;
+    color: white;
+    background-color: teal;
+    border: none;
+    font-size: medium;
+  font-weight:600;
+  cursor: pointer;
+    border-radius: 7px;
+}
+.privacy-policy{
+margin-left: 10%;
+font-size: 14px;
+padding-bottom: 15%;
+padding-top: 5%;
+}
+.hidden{
+    display: none;
+}

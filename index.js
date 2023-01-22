@@ -158,7 +158,15 @@ const signInPopup = () => {
     
     
   }
-  
+  // **********************login-as-Admin*****************************
+
+  const loginpagepopup = () =>{
+    document.querySelector(".login-Admin").classList.remove("hidden")
+    document.querySelector(".sign-up-page").classList.add("hidden")
+  }
+  const Admincross = () =>{
+    document.querySelector(".login-Admin").classList.add("hidden")
+  }
   
   //////////////////////////////////  SIGN-UP-PAGE////////////////////////////////////
 
