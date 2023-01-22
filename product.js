@@ -308,9 +308,89 @@ const signInPopup = () => {
     }
     
   }
+  // pagination
+
+let btn1 = document.getElementById("btn1");
+
+btn1.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=1`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+ 
+})
+
+let btn2 = document.getElementById("btn2");
+
+btn2.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=2`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn3 = document.getElementById("btn3");
+
+btn3.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=3`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn4 = document.getElementById("btn4");
+
+btn4.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=4`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+let btn5 = document.getElementById("btn5");
+
+btn5.addEventListener("click",function(){
+    let promise = fetch(`https://paytm-mall-api-withcatagory.onrender.com/Electonics/?_limit=12&_page=5`);
+    promise.then((res)=>{
+    return res.json();
+})
+.then((response)=>{
+console.log(response);
+fullData = response;
+renderProducts(response);
+})
+    console.log('Yes');
+})
+
+// pagination ended
+
 
   // ******************Linking product to main page***************************
-let main_logo = document.querySelector(".main-website-logo-image")
+let main_logo = document.querySelector("#main-website-logo-image")
 main_logo.addEventListener("click" ,() =>{
     window.location.href = "index.html"
 })

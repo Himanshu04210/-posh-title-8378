@@ -1,6 +1,5 @@
 #cart{
     display: flex;
-   
     gap: 50px;
     margin-top: 10px;
     justify-content: space-between;
