@@ -5,41 +5,34 @@
 }
 
 /* nav started */
-.main-wesite-navbar {
-    margin-bottom: 3%;
-    height: 50px;
-   
-}
-
-/* Modified for product page */
 #main-website-logo-image {
+    cursor: pointer;
     width: 6%;
     margin-left: 45%;
 }
 
-nav{
-    margin-bottom: 25px;
+.main-wesite-navbar {
+    margin-bottom: 3%;
 }
-/* Modified for product page ended*/
+
 
 * body {
     padding: 0;
     margin: 0%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-    /* background-color: whitesmoke; */
+
 }
 
 /* .main-wesite-navbar{
     padding: 2%;
 } */
 .nav-elements {
-    position: sticky;
-    top: 0; 
-    z-index: 4;
+    position: absolute;
+    z-index: 2;
     background-color: white;
     height: 6vh;
     display: flex;
-    width: 98%;
+    width: 95%;
     margin-left: 1%;
     /* background-color: red; */
 }
@@ -51,7 +44,7 @@ nav{
 .menu-shopbyCategory {
     border: 2px solid grey;
     height: 5.9vh;
-    width: 16%;
+    width: 18%;
 
 }
 
@@ -101,7 +94,7 @@ label div:last-child {
     margin-bottom: 0;
 }
 
-*/ #menu_checkbox:checked+label {
+* #menu_checkbox:checked+label {
     transform: translateY(-50%) rotateZ(-90deg);
 }
 
@@ -113,29 +106,36 @@ label div:last-child {
 }
 
 
+
 #nav-bar-inputSearch {
     margin-left: 8%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-    width: 400%;
+    width: 350%;
     padding: 4%;
     height: 4vh;
     border: 1px solid grey;
     outline: none;
 }
 
-#search-icon {
-    width: 4%;
-    border: 1px solid olivedrab;
+.searchIcon{
+    /* width: 60%; */
+    margin-left: 36.5%;
+    
+    /* margin-bottom: -10px; */
+}
+#searchicon{
+    margin-top: 2%;
+    width: 15%;
+ 
 }
 
 #MyOrders {
     display: flex;
-    margin-left: 43%;
+    margin-left: -10%;
     height: 4vh;
     width: 10%;
     cursor: pointer;
 }
-
 #MyOrders img {
     margin-top: 5%;
     height: 4.2vh;
@@ -223,9 +223,9 @@ label div:last-child {
 /* /////////////////////search-bar-dropDown////////////////////////// */
 
 
-.searchBox{
+.searchBox {
     width: 44%;
-    position:absolute;
+    position: absolute;
     background-color: white;
     top: -4.9%;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
@@ -236,10 +236,11 @@ label div:last-child {
     margin-left: 17.5%;
     display: none;
     /* border: 1px solid red; */
- }
- .popular-search{
+}
+
+.popular-search {
     color: orangered;
- }
+}
 
 /* logo */
 .logo{
@@ -380,6 +381,21 @@ input{
 
 /* **********************************sign-in page********************************************* */
 
+.signinpage-background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: 150vh;
+    background-color: black;
+    opacity: 0.3;
+}
+.login-as-admin{
+    color: blue;
+    text-align: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
 .sign-in-page {
     width: 30%;
     margin: auto;
@@ -401,7 +417,7 @@ input{
 
 #e-mail-signin-page {
     margin-left: 13%;
-    padding: 2.5% 15%;
+    padding: 2.5% 10%;
     margin-bottom: 3%;
     border-radius: 1%;
     box-sizing: border-box;
@@ -410,7 +426,7 @@ input{
 
 #password-signin-page {
     margin-left: 13%;
-    padding: 2.5% 15%;
+    padding: 2.5% 10%;
     margin-bottom: 3%;
     border-radius: 1%;
     box-sizing: border-box;
@@ -454,7 +470,7 @@ input{
 }
 .dont-have-account{
     padding-top: 5%;
-    padding-bottom: 25%;
+    padding-bottom: 15%;
     display: flex;
     justify-content: space-around;
 }
@@ -498,7 +514,7 @@ input{
 
 #e-mail-signup-page {
     margin-left: 15%;
-    padding: 2.5% 15%;
+    padding: 2.5% 10%;
     margin-bottom: 3%;
     border-radius: 1%;
     border: 1px solid gainsboro;
@@ -506,7 +522,7 @@ input{
 
 #password-signup-page {
     margin-left: 15%;
-    padding: 2.5% 15%;
+    padding: 2.5% 10%;
     margin-bottom: 3%;
     border-radius: 1%;
     border: 1px solid gainsboro;
@@ -572,6 +588,7 @@ input{
     display: none;
 }
 
+<<<<<<< Updated upstream
 
 /* pagination Buttons */
 #btn{
@@ -596,3 +613,63 @@ input{
     font-size: larger;
     cursor: pointer;
 }
+=======
+/* **********************LOGIN-AS -ADMIN******************************** */
+.login-Admin{
+    margin:auto;
+    margin-top: 5%;
+    width: 30%;
+    position: absolute;
+    z-index: 4;
+    top : 5%;
+    right : 35%;
+    background-color: whitesmoke;
+    /* border: 1px solid blue; */
+    height: 80vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cross-admin{
+    margin-left: 93%;
+    margin-top: -14%;
+    cursor: pointer;
+    
+}
+
+.login-as-admin-heading{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 3%;
+    padding-top: 4%;
+    margin-bottom: 8%;
+}
+.inputOfAdmin{
+    width: 60%;
+    height: 5vh;
+    margin: 2%;
+    margin-left: 18%;
+    outline: none;
+}
+.Admin-submit{
+    width: 60%;
+    height: 6vh;
+    margin: 2%;
+    margin-left: 19%;
+    color: white;
+    background-color: teal;
+    border: none;
+    font-size: medium;
+  font-weight:600;
+  cursor: pointer;
+    border-radius: 7px;
+}
+.privacy-policy{
+margin-left: 10%;
+font-size: 14px;
+padding-bottom: 15%;
+padding-top: 5%;
+}
+.hidden{
+    display: none;
+}
+>>>>>>> Stashed changes

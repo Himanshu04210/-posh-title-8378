@@ -248,3 +248,16 @@ renderProducts(response);
 })
 
 // pagination ended
+// ************************admin-logpout************************
+
+const Adminpopup = () => {
+    document.querySelector(".logout-container").classList.remove("hidden")
+}
+
+const NO = () =>{
+    document.querySelector(".logout-container").classList.add("hidden")
+}
+
+const YES = () =>{
+    window.location.href = "index.html"
+}

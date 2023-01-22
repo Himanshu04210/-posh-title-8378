@@ -107,9 +107,62 @@ select{
     background-color: cyan;
 
 }
- 
+.admin-heading-main{
+display: flex;
+}
+ #welcome-admin{
+    margin-left: 40%;  
+    color: teal;
+ }
+ #nav-admin{
+    cursor: pointer;
+    margin-left: 30%;
+ }
+ /* ****************************************Admin-Logout**************************** */
+ .logout-container{
+    position: absolute;
+    top: 1%;
+    left: 26%;
+        padding: 2%;
+        margin: auto;
+        margin-top: 10%;
+        width: 40%;
+        height: 20vh;
+        background-color: whitesmoke;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #are-you-sure{
+        color: teal;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #yes{
+        margin-left: 36%;
+        background-color:  darkolivegreen;
+        border: none;
+        padding: 1%;
+        color: white;
+        border-radius: 8%;
+        cursor: pointer;
+    }
+    #no{
+        margin-left: 4%;
+        background-color: darkolivegreen;
+        border: none;
+        padding: 1%;
+        color: white;
+        border-radius: 8%;
+        cursor: pointer;
+    }
+    .hidden{
+        display: none;
+    }
 </style>
-<body> 
+<body>
+    <div class="admin-heading-main">
+        <h1 id="welcome-admin">Welcome Back, Admin</h1>
+        <h3 id="nav-admin" onClick={Adminpopup()}>Admin</h3>
+    </div>
+   
     <select name="forms" id="operation">
             <option value="Get">GET</option>
             <option value="Post">POST</option>
@@ -136,6 +189,11 @@ select{
         <button id="btn4">4</button>
         <button id="btn5">5</button>
     </div>
+    <div class="logout-container hidden">
+        <h1 id="are-you-sure">Are you sure, you want to Log-out?</h1>
+        <button id="yes" onClick={YES()}>YES</button>
+        <button id="no" onClick={NO()}>NO</button>
+       </div>
 </body>
 <script src="admin.js"></script>
 </html>

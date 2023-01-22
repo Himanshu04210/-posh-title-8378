@@ -116,6 +116,7 @@ label div:last-child {
 
 .searchIcon{
     /* width: 60%; */
+    cursor: pointer;
     margin-left: 29%;
     
     /* margin-bottom: -10px; */
