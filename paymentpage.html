@@ -270,7 +270,9 @@ amount.addEventListener("click",()=>{
     let value3=document.getElementById("value3").value;
     let value4=document.getElementById("value4").value;
     if(value1.length==1 && value2.length==1 && value3.length==1 &&value4.length==1){
-        alert("PAYMENT SUCESSFUL")
+        
+        window.location.href='thankyou.html'
+        
     }else{
         alert("Inavalid PASSCODE")
     }
