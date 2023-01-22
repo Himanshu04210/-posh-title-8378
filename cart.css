@@ -3,17 +3,13 @@
     gap: 50px;
     margin-top: 10px;
     justify-content: space-between;
-    /* border: 1px solid red; */
     background-color: #F5F7F7;
   
 }
 #cartproduct{
-    display: flex;
-    /* border: 1px solid red; */
-    flex-direction: column;
-    padding: 50px;
-    width:50%;
-   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1em;
 }
 #productprice{
    
@@ -41,6 +37,20 @@
     font-size: 1.2em;
     color: white;
     cursor: pointer;
+  }
+
+  #price{
+   font-weight: 500;
+   font-size: 22px;
+   padding-right: 10px;
+  }
+  #remove{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 7px;
+    border-radius: 8px;
+    
   }
   /* NAVBAR----------------- */
 

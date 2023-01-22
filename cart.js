@@ -1,23 +1,44 @@
 let data =JSON.parse(localStorage.getItem("cartItems")) || [];
 console.log(data)
 let parent = document.getElementById("cartproduct");
-window.addEventListener("load", ()=>{
-    data.map((item)=>{
 
-    
-    let div = document.createElement("div");
-    let image = document.createElement("img");
-    image.setAttribute("src", item.Image);
-    let desc = document.createElement("p");
-    desc.innerText = item.Description;
-    let price = document.createElement("h4");
-    price.innerText = item.price;
-    
-    div.append(image,desc,price);
-    parent.append(div);
-  })
-})
+ window.addEventListener("load", ()=>{
+   
 
+    renderItem(data)
+    
+
+  
+ })
+
+function renderItem(data){
+    
+    data.map((item,index)=>{
+    
+    
+        let div = document.createElement("div");
+        let image = document.createElement("img");
+        image.setAttribute("src", item.Image);
+        let desc = document.createElement("p");
+        desc.innerText = item.Description;
+        let price = document.createElement("span");
+        price.setAttribute("id","price")
+        price.innerText = item.price;
+        let remove = document.createElement("button");
+        remove.setAttribute("id","remove");
+        remove.innerText = "Remove"
+        remove.addEventListener("click",function(){
+            console.log("work")
+            data.splice(index,1);
+            localStorage.setItem("cartItems",JSON.stringify(data))
+            renderItem(data)
+            location.reload()
+        })
+        div.append(image,desc,price,remove);
+        parent.append(div);
+    
+      })
+}
 
 let parent2 = document.getElementById("productprice");
 let carttotal = [];
@@ -48,6 +69,7 @@ window.addEventListener("load", ()=>{
         total+=item;
       final=total;
     }
+
     let displayprice = document.getElementById("bag_price")
     displayprice.innerText =total;
     let total1 = document.getElementById("total")
