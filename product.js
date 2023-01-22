@@ -51,6 +51,7 @@ function renderProducts(arr) {
     card.addEventListener("click",function(){
         localStorageData.push(item);
         localStorage.setItem("localStorageData",JSON.stringify(localStorageData));
+        window.location.href = "checkout.html";
         
     })
     container.append(card);

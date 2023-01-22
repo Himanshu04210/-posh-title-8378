@@ -244,8 +244,9 @@ const signInPopup = () => {
     
   }
   
-//////////////////sign in/signup functionality end////////////////////////////////////////  
+//////////////////sign in/signup functionality end////////////////////////////////////////
 
+// Search Functionality
 let searchBtn = document.getElementById("searchicon");
 searchBtn.addEventListener("click",function(){
   // console.log("Yes");
@@ -254,6 +255,7 @@ searchBtn.addEventListener("click",function(){
   localStorage.setItem("productName",product.value);
   window.location.href = "product.html"
 })
+// Search Functionality ended
 
 
 // Admin Part
@@ -267,3 +269,14 @@ adminbtn.addEventListener("click",function(){
     window.location.href = "admin.html";
   }
 })
+
+// Admin part ended
+
+//  Cart Link 
+
+let cartPage = document.getElementById("Cart-navBar");
+cartPage.addEventListener("click",()=>{
+  window.location.href = "cart.html";
+})
+
+// Cart Link ended

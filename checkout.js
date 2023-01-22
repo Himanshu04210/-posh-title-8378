@@ -5,8 +5,8 @@
 
 
 let container = document.getElementById("check1");
-
-let data =JSON.parse(localStorage.getItem("localStorageData")) || [];
+let cartItem = JSON.parse(localStorage.getItem("cartItems"))||[];
+let data = JSON.parse(localStorage.getItem("localStorageData")) || [];
     
     window.addEventListener("load", ()=>{
         let div = document.createElement("div");
@@ -35,11 +35,21 @@ let data =JSON.parse(localStorage.getItem("localStorageData")) || [];
         })
         
         
+        // let addbtn = document.getElementById("addbtn")
+        //     addbtn.addEventListener("click",function(){
+
+        //     localStorage.setItem("cartItems",JSON.stringify(data));
+        //     // console.log("working")
+
+        //     let data3 = JSON.parse(localStorage.getItem("cartItems"))
+        //     window.location.href = "cart.html";
+        //     console.log(data3)
+
+        // })
+        // cart link
         let addbtn = document.getElementById("addbtn")
-            addbtn.addEventListener("click",function(){
-            localStorage.setItem("cartItems",JSON.stringify(data));
-            console.log("working")
-            let data3 = JSON.parse(localStorage.getItem("cartItems"))
-            console.log(data3)
+        addbtn.addEventListener("click",function(){
+            cartItem.push(data[0]);
+            localStorage.setItem("cartItems",JSON.stringify(cartItem));
+            window.location.href = "cart.html";
         })
-   
